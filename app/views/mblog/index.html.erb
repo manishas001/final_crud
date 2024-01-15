@@ -1,0 +1,69 @@
+
+<div class="indx">
+<center>
+
+<span class="head">Hello , Welcome To Our  Blog Website</span>
+
+
+
+<span class="login"><%= link_to 'Sign IN', new_owner_session_path %> </span>
+<span class="logout"><%= button_to  'Sign Out', destroy_owner_session_path , method: :delete %> </span>
+  
+
+
+
+        
+        
+        
+
+
+
+
+<br>
+
+<div class="tble">
+<h3>Blog Lists</h3>
+<div class="adnew"><%= link_to 'Add New Blog', new_mblog_path %> </div>
+<br><br>
+
+
+
+    <table border="2px solid black">
+      <tr>   
+        <th>Sr No.</th>  
+        <th>Name</th>  
+        <th>Title</th>   
+        <th>Description</th>  
+        <th>Blog Image </th>
+        <th colspan="2">Action</th>  
+      </tr>
+
+       <% @blog.each do |mblog| %>
+          <tr>
+            <td><%= mblog.id %></td>   
+            <td><%= mblog.name %></td>   
+            <td><%= mblog.title %></td>   
+            <td><%= truncate(mblog.description, :length => 75) %></td>
+            <td>
+              <% mblog.photos.each do |photo| %>
+                <%= image_tag(photo) %>
+              <% end %>
+              </td>
+              
+             <td><%= link_to "Update",  edit_mblog_path(mblog.id), :method => 'update' %></td>
+            
+            <td><%= button_to 'Delete', mblog_path(mblog.id), :method => 'delete', :confirm => 'Are you sure?' %></td>   
+            
+
+              
+           </tr>   
+      <% end %>   
+      <table>
+
+        
+</center>
+</div>
+
+        
+        
+        

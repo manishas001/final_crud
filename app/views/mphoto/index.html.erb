@@ -1,0 +1,11 @@
+<!-- app/views/mphotos/index.html.erb -->
+
+<h1>Mphoto Index</h1>
+
+<% @mphoto.each do |mphoto| %>
+  
+    <%= image_tag(mphoto.image.url) %>
+    
+<% end %>
+
+<%= link_to 'New Mphoto', new_mphoto_path %>

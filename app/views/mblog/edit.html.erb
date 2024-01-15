@@ -1,0 +1,41 @@
+<%# <h1>Edit Blog</h1>
+<%= render 'form', blog: @blog %>
+<%# <%= link_to 'Back', blogs_path %> 
+
+
+
+<div class="add">
+
+
+<h1>Update Blog</h1>
+
+
+<%= form_for(@blog, url: mblog_path, local: true, method: :patch) do |f| %>
+<%# <%= form_for(@blog, url: blog_path, local: true, method: :patch) do |f| %>
+
+
+<%# <%= form_for @product, url: {action: :update} do |f| %> 
+   <span class="labl"> <%= f.label "Enter name" %></span>
+    <span class="box" ><%= f.text_field :name %></span>
+    <br><br>
+
+    <span class="box" ><%= f.label "Enter Title:" %></span>
+    <span class="box" ><%= f.text_field :title %></span>
+    <br><br>
+
+    <span class="box" ><%= f.label "Enter Description:" %></span>
+    <span class="box" ><%= f.text_area :description %></span>
+    <br><br>
+
+    <span class="box" ><%= f.label "Upload Photos:" %></span>
+    <span class="box" ><%= f.file_field :photos , multiple: true%></span>
+
+    
+
+
+    <br><br>
+
+    <%= f.submit 'update Blog' %> &nbsp;&nbsp;&nbsp;
+    <%= link_to 'Sign Out', destroy_owner_session_path, method: :delete %>
+<% end %>
+</div>

@@ -1,0 +1,36 @@
+<!-- app/views/mphotos/new.html.erb -->
+
+<%# <h1>New Mphoto</h1>
+
+<%= render 'form', mphoto: @mphoto %>
+
+<%# <%= link_to 'Back', mphotos_path %> 
+
+
+<!-- app/views/mphotos/_form.html.erb -->
+<%= form_with(model: Bloguser.new, url: blogs_path, local: true, method: :post) do |f| %>
+
+<%= form_with(model: Mphoto.new,url: blogs_path, local: true, method: :post) do |form| %>
+  <% if mphoto.errors.any? %>
+    
+      <h2><%= pluralize(mphoto.errors.count, "error") %> prohibited this mphoto from being saved:</h2>
+
+      <ul>
+        <% mphoto.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </p>
+
+  <!-- Add any other desired form fields here -->
+
+  
+    <%= form.submit %>
+  
+<% end %>

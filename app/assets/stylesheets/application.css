@@ -1,0 +1,120 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.add{
+
+    color:black;
+    text-align: center;
+    border:1px solid black;
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    margin: auto;
+    background-color: lightgray;
+    max-width: 50%;
+
+    /* max-width: 50%; */
+    
+    
+}
+.labl3{
+    padding-left:80px;
+
+}
+
+ 
+
+.labl{
+    padding-right:px;
+
+}
+.labl2{
+    padding-right:30px;
+
+}
+
+.box{
+    padding-left: 80px;
+
+}
+.box1{
+    padding-left: 85px;
+
+}
+.box2{
+    padding-left: 20px;
+
+}
+
+.box3{
+    padding-left: 80px;
+
+}
+
+.btn{
+    padding: 20px;
+    margin: 10px;
+    color: green; 
+
+}
+
+.sign{
+    color: red;
+}
+
+
+.indx{
+    background-color:paleturquoise;
+}
+
+.tble{
+    color:black;
+
+}
+
+
+
+.head{
+    font-size: 50px;
+    font-weight: bold;
+    
+}
+
+.login{
+    padding-top: 10px;
+    padding-left: 60px;
+    position: absolute;
+    padding-right: 0px;
+    font-size: 30px;
+    margin-right:1px ;
+
+}
+
+.adnew{
+    text-align: center;
+    font-size: 25px;
+    
+
+}
+
+
+.logout{
+    font-size: 30px;
+    padding-top: 10px;
+    padding-left: 190px;
+    position: absolute;
+
+}

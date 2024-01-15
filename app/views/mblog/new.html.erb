@@ -1,0 +1,41 @@
+
+
+    <div class="add">
+<h1>New Blog</h1>
+
+<%= form_with(model: Mblog.new, url: mblog_index_path, local: true, method: :post) do |f| %>
+   <span class="labl"> <%= f.label "Enter Name:" %></span>
+    <span class="box" ><%= f.text_field :name %></span>
+    <br><br>
+
+   <span class="labl"> <%= f.label "Enter Title:" %></span>
+    <span class="box1"><%= f.text_field :title %></span>
+    <br><br>
+
+    <span class="labl2"><%= f.label "Enter Description:" %></span>
+    <span class="box2"><%= f.text_area :description %></span>
+    <br><br>
+
+    <span class="labl3"><%= f.label "Upload Image:" %></span>
+
+      <span class="box3"><%= f.file_field :photos, multiple: true %> </span>
+      
+
+    
+
+
+
+
+    <br><br> 
+
+
+
+
+
+    <span class="btn"><%= f.submit 'create blog' %></span> &nbsp;&nbsp;&nbsp;
+    <span class="sign"><%= link_to 'Sign Out', destroy_owner_session_path, method: :delete %></span>
+<% end %>
+
+    </center>
+
+</div>
